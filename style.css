@@ -102,17 +102,17 @@ body {
     align-items: end;
 }
 
-.game1 {
+.game:nth-child(1) {
     background: url(./img/game1.jpg);
     background-repeat: no-repeat;
 }
 
-.game2 {
+.game:nth-child(2) {
     background: url(./img/game2.jpg);
     background-repeat: no-repeat;
 }
 
-.game3 {
+.game:nth-child(3) {
     background: url(./img/game3.jpg);
     background-repeat: no-repeat;
 }
