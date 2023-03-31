@@ -29,14 +29,14 @@ window.addEventListener("DOMContentLoaded", (event) => {
 //     console.log(`${property} - salary is ${obj[property]} dollars`);
 // }
 
-//5 task
-// let n = 1000,
-// num = 0;
-// while(n / 2 >= 50) {
-//     n /= 2;
-//     num++;
-// }
-// console.log(`final number is ${n} and loop has made ${num} iterations`);
+// 5 task
+let n = 1000,
+num = 0;
+while(n >= 50) {
+    n /= 2;
+    num++;
+}
+console.log(`final number is ${n} and loop has made ${num} iterations`);
 
 //6 task
 // let firstFriday = 3,
