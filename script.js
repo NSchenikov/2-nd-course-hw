@@ -6,8 +6,6 @@
 // const min = (a, b) => {
 //     if(a > b) {
 //         return b;
-//     } else if (a < b) {
-//         return a;
 //     } else {
 //         return a;
 //     }
@@ -82,30 +80,31 @@
 // console.log(cube());
 
 //task 7
+// function getArea(r) {
+//     return Math.PI * Math.pow(r, 2);
+// }
+
+// function getPerimeter(r) {
+//     return 2 * Math.PI * r;
+// }
+
 // let circle1 = {
-//     radius: 5,
-//     getArea: function() {
-//         return Math.PI * Math.pow(this.radius, 2);
-//     },
-//     getPerimeter: function() {
-//         return 2 * Math.PI * this.radius;
-//     }
+//     radius: 5
 // };
 
 // let circle2 = {
-//     radius: 6,
-//     getArea: function() {
-//         return Math.PI * Math.pow(this.radius, 2);
-//     },
-//     getPerimeter: function() {
-//         return 2 * Math.PI * this.radius;
-//     }
+//     radius: 6
 // };
 
-// console.log(`Площадь первого круга равна ${circle1.getArea()}`);
-// console.log(`Площадь второго круга равна ${circle2.getArea()}`);
-// console.log(`Периметр первого круга равен ${circle1.getPerimeter()}`);
-// console.log(`Периметр второго круга равен ${circle2.getPerimeter()}`);
+// circle1.area = getArea(circle1.radius);
+// circle2.area = getArea(circle2.radius);
+// circle1.perimeter = getPerimeter(circle1.radius);
+// circle2.perimeter = getPerimeter(circle2.radius);
+
+// console.log(`Площадь первого круга равна ${circle1.area}`);
+// console.log(`Площадь второго круга равна ${circle2.area}`);
+// console.log(`Периметр первого круга равен ${circle1.perimeter}`);
+// console.log(`Периметр второго круга равен ${circle2.perimeter}`);
 
 //task 8
 // let btn = document.querySelectorAll("btn");

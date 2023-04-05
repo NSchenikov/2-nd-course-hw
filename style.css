@@ -64,6 +64,13 @@ body {
     font-size: 18px;
     line-height: 22px;
     color: #FFFFFF;
+    transition: all 0.3s;
+    box-sizing: border-box;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 5px #ccc;
 }
 
 .games {
@@ -94,6 +101,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    transition: all 0.3s;
+    box-sizing: border-box;
+}
+
+.game:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 5px #ccc;
 }
 
 .imgwrapper {
