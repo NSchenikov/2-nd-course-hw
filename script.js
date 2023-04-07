@@ -2,115 +2,146 @@
 
 // window.addEventListener("DOMContentLoaded", (event) => {
 
-//task 1
-// const min = (a, b) => {
-//     if(a > b) {
-//         return b;
+//1 task
+// const arr = [1, 5, 4, 10, 0, 3];
+// let element = 10;
+
+// for(let i = 0; i <= arr.length; i++) {
+//     if(arr[i] != element) {
+//         console.log(arr[i]);
 //     } else {
-//         return a;
+//         break;
 //     }
-// };
-
-// console.log(min(0, -1));
-
-//task 2
-// const evenodd = (a) => {
-//     if(a % 2 == 0) {
-//         return "число четное";
-//     } else {
-//         return "число нечетное";
-//     }
-// };
-
-// console.log(evenodd(8));
-
-//task 3
-// function square(a) {
-//     console.log(Math.pow(a, 2));
 // }
 
-// function sqr(b) {
-//     return Math.pow(b, 2);
+//2 task
+// const arr = [1, 5, 4, 10, 0, 3];
+// let pos = 4;
+// let element = arr.indexOf(pos);
+// console.log(element);
+
+//3 task
+// const arr = [1, 3, 5, 10, 20];
+// let str = arr.join(' ');
+// console.log(str);
+// console.log(typeof(str));
+
+//4 task
+// const arr = [];
+
+// for (let i = 0; i <= 2; i++) {
+//     arr.push([]);
+//     for(let j = 0; j <= 2; j++) {
+//         arr[i][j] = 1;
+//     }
 // }
 
-// square(3);
-// console.log(sqr(4));
+// console.log(arr);
 
-//task 4
-// let age = function() {
-//     let yearsOld = prompt('Сколько Вам лет?');
-//     yearsOld = Number(yearsOld);
+//5 task
+// let arr = [1, 1, 1];
 
-//     if(yearsOld < 0) {
-//         alert('Вы ввели неправильное значение');
-//     } else if(yearsOld >= 0 && yearsOld <= 12) {
-//         alert('Привет, друг!');
-//     } else if(yearsOld >= 13) {
-//         alert('Добро пожаловать!');
-//     } else {
-//         alert('smth get wrong');
-//     }
-// };
-
-// age();
-
-//task 5
-// const numbas = (first, second) => {
-//     if(isNaN(first) || isNaN(second)) {
-//         return "Одно или оба значения не являются числом";
-//     } else {
-//         return first * second;
-//     }
-// };
-
-// console.log(numbas('yyy', 6));
-
-//task 6
-// const cube = () => {
-//     let n = prompt("Введите число");
-
-//     if (isNaN(n)) {
-//         return "Переданный параметр не является числом";
-//     } else {
-//         n = Math.pow(n, 3);
-//         return `n в кубе равняется ${n}`;
-//     }
-// };
-
-// console.log(cube());
-
-//task 7
-// function getArea(r) {
-//     return Math.PI * Math.pow(r, 2);
+// for(let i = 0; i <= 2; i++) {
+//     arr.push(2);
 // }
 
-// function getPerimeter(r) {
-//     return 2 * Math.PI * r;
+// console.log(arr);
+
+//6 task
+// let arr = [9, 8, 7, 'a', 6, 5];
+
+// for(let i = 0; i <= arr.length; i++) {
+//     if(typeof(arr[i]) === 'string') {
+//         delete arr[i];
+//     }
 // }
 
-// let circle1 = {
-//     radius: 5
-// };
+// arr.sort();
 
-// let circle2 = {
-//     radius: 6
-// };
+// console.log(arr);
 
-// circle1.area = getArea(circle1.radius);
-// circle2.area = getArea(circle2.radius);
-// circle1.perimeter = getPerimeter(circle1.radius);
-// circle2.perimeter = getPerimeter(circle2.radius);
+//7 task
+// const arr = [9, 8, 7, 6, 5];
+// let answer = Number(prompt('Введите элемент, который Вы хотели бы найти'));
 
-// console.log(`Площадь первого круга равна ${circle1.area}`);
-// console.log(`Площадь второго круга равна ${circle2.area}`);
-// console.log(`Периметр первого круга равен ${circle1.perimeter}`);
-// console.log(`Периметр второго круга равен ${circle2.perimeter}`);
+// arr.includes(answer) ? alert('Элемент содержится в существующем массиве') : alert('Элемент не содержится в существующем массиве');
 
-//task 8
-// let btn = document.querySelectorAll("btn");
-// btn[1].addEventListener('click', function(event) {
-//     monthNum();
+//8 task
+// let row = 'abcdef';
+
+// row = row.split('');
+// row.reverse();
+// row = row.join('');
+// console.log(row);
+
+//9 task
+// let arr = [[1, 2, 3,],[4, 5, 6]];
+// let another = [];
+
+// arr.forEach((row) => {
+//     row.forEach((el) => {
+//         another.push(el);
+//     });
 // });
+
+// console.log(another);
+
+//10 task
+// let arr = [1, 3, 2, 4, 6, 5, 7, 9, 8, 10];
+
+// for(let i = 0; i <= arr.length - 2; i++) {
+//     console.log(arr[i] + arr[i + 1]);
+// }
+
+//11 task
+// let arr = [1, 3, 2, 4, 6, 5, 7, 9, 8, 10];
+
+// function sqr(...ar) {
+//     ar = ar.map(item => item ** 2);
+//     return ar;
+// }
+
+// let newArr = sqr(...arr);
+
+// console.log(newArr);
+
+//12 task
+// const getLengthWords = arr => arr.map(str => str.length);
+
+// console.log(getLengthWords(['слово', '', 'слог', 'длинное предложение', 'буква']));
+
+//13 task
+// const getNegativeNum = arr => arr.map(num => -num);
+
+// console.log(getNegativeNum([6, 10, 9, 91, 50]));
+
+//14 task
+// const array = [];
+
+// for(let i = 0; i <= 9; i++) {
+//     array[i] = Math.floor(Math.random() * 10) + 1;
+// }
+
+// console.log(array);
+
+// const evens = array.filter(item => item % 2 === 0);
+
+// console.log(evens);
+
+//15 task
+// const array = [];
+
+// for(let i = 0; i <= 5; i++) {
+//     array[i] = Math.floor(Math.random() * 10) + 1;
+// }
+
+// console.log(array);
+
+// let average = array.reduce((a, b) => a + b, 0) / array.length;
+
+// console.log(`среднее арифметическое равно ${average}`);
+
+
 
 function monthNum() {
     let num = Number(prompt("Введите номер месяца"));
