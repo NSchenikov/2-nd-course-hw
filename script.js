@@ -7,9 +7,10 @@
 // let element = 10;
 
 // for(let i = 0; i <= arr.length; i++) {
-//     if(arr[i] != element) {
-//         console.log(arr[i]);
-//     } else {
+
+//     console.log(arr[i]);
+
+//     if (arr[i] === element) {
 //         break;
 //     }
 // }
@@ -50,14 +51,7 @@
 //6 task
 // let arr = [9, 8, 7, 'a', 6, 5];
 
-// for(let i = 0; i <= arr.length; i++) {
-//     if(typeof(arr[i]) === 'string') {
-//         delete arr[i];
-//     }
-// }
-
-// arr.sort();
-
+// arr.sort().pop();
 // console.log(arr);
 
 //7 task
@@ -76,14 +70,8 @@
 
 //9 task
 // let arr = [[1, 2, 3,],[4, 5, 6]];
-// let another = [];
 
-// arr.forEach((row) => {
-//     row.forEach((el) => {
-//         another.push(el);
-//     });
-// });
-
+// let another = arr.flat();
 // console.log(another);
 
 //10 task
@@ -119,7 +107,7 @@
 // const array = [];
 
 // for(let i = 0; i <= 9; i++) {
-//     array[i] = Math.floor(Math.random() * 10) + 1;
+//     array[i] = Math.floor(Math.random() * 10);
 // }
 
 // console.log(array);
