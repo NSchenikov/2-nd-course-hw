@@ -2,134 +2,138 @@
 
 // window.addEventListener("DOMContentLoaded", (event) => {
 
-//1 task
-// const arr = [1, 5, 4, 10, 0, 3];
-// let element = 10;
+//task 1
+// console.log('Бла-блА-бЛа-бла-БЛА'.toUpperCase());
 
-// for(let i = 0; i <= arr.length; i++) {
+//task 2
+// const substrs = ['Кошка', 'Кит', 'Комар', 'Носорог'];
 
-//     console.log(arr[i]);
+// let array = substrs.map(element => {
+//   return element.toLowerCase();
+// });
 
-//     if (arr[i] === element) {
-//         break;
+// function searchStart(substrs, str) {
+//     return substrs.filter(substr => substr.toLowerCase().startsWith(str.toLowerCase()));
+// }
+
+// console.log(searchStart(array, 'ко'));
+
+//task 3
+// let num = 32.58884;
+// console.log(`до меньшего целого ${Math.floor(num)}`);
+// console.log(`до большего целого ${Math.ceil(num)}`);
+// console.log(`до ближайшего целого ${Math.round(num)}`);
+
+//task 4
+// let numbers = [52, 53, 49, 77, 21, 32];
+// console.log(`Наименьшее это ${Math.min(...numbers)}`);
+// console.log(`Наибольшее это ${Math.max(...numbers)}`);
+
+//task 5
+// function randomizer() {
+//     return Math.round(Math.random() * 10);
+// }
+
+// console.log(randomizer());
+
+//task 6
+// function getRandomArrNumbers(num) {
+//     let arr = [];
+//     let len = num / 2;
+
+//     for(let i = 1; i <= len; i++) {
+//         arr.push(Math.round(Math.random() * num));
+//     }
+
+//     return arr;
+// }
+
+// console.log(getRandomArrNumbers(9));
+
+//task 7
+// function rnd(a, b) {
+//     if(a < b) {
+//         return Math.floor(Math.random() * (b - a + 1)) + a;
+//     } else {
+//         return Math.floor(Math.random() * (a - b + 1)) + b;
 //     }
 // }
 
-//2 task
-// const arr = [1, 5, 4, 10, 0, 3];
-// let pos = 4;
-// let element = arr.indexOf(pos);
-// console.log(element);
+// console.log(rnd(10, 1));
 
-//3 task
-// const arr = [1, 3, 5, 10, 20];
-// let str = arr.join(' ');
-// console.log(str);
-// console.log(typeof(str));
+//task 8
+// let currentDate = new Date();
+// console.log(currentDate);
 
-//4 task
-// const arr = [];
+//task 9
+// const currentDate = new Date();
+// currentDate.setDate(new Date().getDate() + 73);
+// console.log(currentDate);
 
-// for (let i = 0; i <= 2; i++) {
-//     arr.push([]);
-//     for(let j = 0; j <= 2; j++) {
-//         arr[i][j] = 1;
-//     }
+//task 10
+// let myDate = new Date();
+// const days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+// const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+// "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+// let hour = myDate.getHours();
+// let minute = myDate.getMinutes();
+// let second = myDate.getSeconds();
+
+// let fullDate = "Дата: " + myDate.getDate() + " " + months[myDate.getMonth()] 
+// + " " + myDate.getFullYear() + " - это " + days[myDate.getDay()];
+
+// if (minute < 10) {
+// 	minute = "0" + minute;
+// }
+// if (second < 10) {
+// 	second = "0" + second;
 // }
 
-// console.log(arr);
+// let fullTime = "Время: " + hour + ":" + minute + ":" + second;
 
-//5 task
-// let arr = [1, 1, 1];
+// console.log(fullDate);
+// console.log(fullTime);
 
-// for(let i = 0; i <= 2; i++) {
-//     arr.push(2);
-// }
+//task 11
+let arr = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
 
-// console.log(arr);
+function shuffle(arr) {
+    // let currentIn = arr.length,  
+    // randomIn;
+  
+    // while (currentIn != 0) {
+    //   randomIn = Math.floor(Math.random() * currentIn);
+    //   currentIn--;
+    //   [arr[currentIn], arr[randomIn]] = [arr[randomIn], arr[currentIn]];
+    // }
 
-//6 task
-// let arr = [9, 8, 7, 'a', 6, 5];
+    arr = arr.sort(() => Math.random() - 0.5);
 
-// arr.sort().pop();
-// console.log(arr);
+    let str = arr.join(', ');
+    
+    alert(`Дана последовательность слов: ${str}`);
 
-//7 task
-// const arr = [9, 8, 7, 6, 5];
-// let answer = Number(prompt('Введите элемент, который Вы хотели бы найти'));
+    arr = arr.map(element => {
+        return element.toLowerCase();
+    });
 
-// arr.includes(answer) ? alert('Элемент содержится в существующем массиве') : alert('Элемент не содержится в существующем массиве');
+    let first = prompt('Чему равнялся первый элемент массива?').toLowerCase();
+    let last = prompt('Чему равнялся последний элемент массива?').toLowerCase();
 
-//8 task
-// let row = 'abcdef';
+    if(first === arr[0] && last === arr[arr.length - 1]) {
+        alert('Поздравляем! Вы угадали оба слова!');
+    } else if(first === arr[0] || last === arr[arr.length - 1]) {
+        alert('Вы были близки к победе!');
+    } else {
+        alert('К сожалению, вы ответили неверно');
+    }
+  }
 
-// row = row.split('');
-// row.reverse();
-// row = row.join('');
-// console.log(row);
-
-//9 task
-// let arr = [[1, 2, 3,],[4, 5, 6]];
-
-// let another = arr.flat();
-// console.log(another);
-
-//10 task
-// let arr = [1, 3, 2, 4, 6, 5, 7, 9, 8, 10];
-
-// for(let i = 0; i <= arr.length - 2; i++) {
-//     console.log(arr[i] + arr[i + 1]);
-// }
-
-//11 task
-// let arr = [1, 3, 2, 4, 6, 5, 7, 9, 8, 10];
-
-// function sqr(...ar) {
-//     ar = ar.map(item => item ** 2);
-//     return ar;
-// }
-
-// let newArr = sqr(...arr);
-
-// console.log(newArr);
-
-//12 task
-// const getLengthWords = arr => arr.map(str => str.length);
-
-// console.log(getLengthWords(['слово', '', 'слог', 'длинное предложение', 'буква']));
-
-//13 task
-// const getNegativeNum = arr => arr.map(num => -num);
-
-// console.log(getNegativeNum([6, 10, 9, 91, 50]));
-
-//14 task
-// const array = [];
-
-// for(let i = 0; i <= 9; i++) {
-//     array[i] = Math.floor(Math.random() * 10);
-// }
-
-// console.log(array);
-
-// const evens = array.filter(item => item % 2 === 0);
-
-// console.log(evens);
-
-//15 task
-// const array = [];
-
-// for(let i = 0; i <= 5; i++) {
-//     array[i] = Math.floor(Math.random() * 10) + 1;
-// }
-
-// console.log(array);
-
-// let average = array.reduce((a, b) => a + b, 0) / array.length;
-
-// console.log(`среднее арифметическое равно ${average}`);
+//   shuffle(arr);
+  
 
 
+//-----
 
 function monthNum() {
     let num = Number(prompt("Введите номер месяца"));
