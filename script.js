@@ -3,98 +3,127 @@
 // window.addEventListener("DOMContentLoaded", (event) => {
 
 //task 1
-// console.log('Бла-блА-бЛа-бла-БЛА'.toUpperCase());
+// let mult = (arr) => {
+//     let m = arr.reduce((a, b) => a * b);
+//     console.log(m);
+// };
+
+// let sum = (arr) => {
+//     let m = arr.reduce((a, b) => a + b);
+//     console.log(m);
+// };
+
+// let getResult = (arr, callback) => {
+//     callback(arr);
+// };
+
+// getResult ([3, 4, 1, 9], mult);
+// getResult ([3, 4, 1, 9], sum);
 
 //task 2
-// const substrs = ['Кошка', 'Кит', 'Комар', 'Носорог'];
+// const users = [
+// 	{name: 'Jon', age: 22},
+// 	{name: 'Richard', age: 18},
+// 	{name: 'Anton', age: 32},
+// 	{name: 'Lida', age: 23},
+// 	{name: 'Bob', age: 44}
+// ];
 
-// let array = substrs.map(element => {
-//   return element.toLowerCase();
-// });
+// function getSortedArrayObj(arr) {
 
-// function searchStart(substrs, str) {
-//     return substrs.filter(substr => substr.toLowerCase().startsWith(str.toLowerCase()));
-// }
-
-// console.log(searchStart(array, 'ко'));
-
-//task 3
-// let num = 32.58884;
-// console.log(`до меньшего целого ${Math.floor(num)}`);
-// console.log(`до большего целого ${Math.ceil(num)}`);
-// console.log(`до ближайшего целого ${Math.round(num)}`);
-
-//task 4
-// let numbers = [52, 53, 49, 77, 21, 32];
-// console.log(`Наименьшее это ${Math.min(...numbers)}`);
-// console.log(`Наибольшее это ${Math.max(...numbers)}`);
-
-//task 5
-// function randomizer() {
-//     return Math.round(Math.random() * 10);
-// }
-
-// console.log(randomizer());
-
-//task 6
-// function getRandomArrNumbers(num) {
-//     let arr = [];
-//     let len = num / 2;
-
-//     for(let i = 1; i <= len; i++) {
-//         arr.push(Math.round(Math.random() * num));
+//     function compareFunction(a, b) { 
+//         return a.age - b.age;
 //     }
 
+//     for (let i = 0; i < arr.length; i++) {
+// 	  for (let j = i; j < arr.length; j++) {
+        
+// 	    const condition = compareFunction ? compareFunction(arr[i], arr[j]) > 0 : arr[i].toString() > arr[j].toString();
+        
+// 	    if (condition) {
+// 				let temp = arr[i];
+//                 arr[i] = arr[j];
+//                 arr[j] = temp;
+//             }
+//         }
+//     }
+//     console.log(arr);
 //     return arr;
 // }
 
-// console.log(getRandomArrNumbers(9));
+// getSortedArrayObj(users);
 
-//task 7
-// function rnd(a, b) {
-//     if(a < b) {
-//         return Math.floor(Math.random() * (b - a + 1)) + a;
-//     } else {
-//         return Math.floor(Math.random() * (a - b + 1)) + b;
-//     }
+//task 3
+// const array1 = [1, '4', 9, 'two'];
+// const array2 = [1, '4', false, 9, 'two'];
+
+// const reversArr = (arr) => {
+//     let reversed = arr.reverse();
+//     console.log(reversed);
+//     return reversed;
+// };
+
+// const toNumberArr = (arr) => {
+//     arr = arr.map(str => {return +str}).filter(function (value) {
+//         return !Number.isNaN(value);
+//     });
+
+//     console.log(arr);
+//     return arr;
+// };
+
+// const each = (arr, callback) => {
+//     callback(arr);
+// };
+
+// each(array1, reversArr);
+// each(array2, toNumberArr);
+
+//task 4
+// const data = () => {
+//     let currentDate = new Date();
+//     console.log(currentDate);
+// };
+
+// const timer = () => {
+// 	const interval = setInterval(data, 3000);
+
+// 	setTimeout(() => {
+//     clearInterval(interval);
+//     console.log('30 секунд прошло');
+//   }, 30000);
+// };
+
+// timer();
+
+//task 5
+// function calling() {
+//     console.log('Звоню!');
 // }
 
-// console.log(rnd(10, 1));
-
-//task 8
-// let currentDate = new Date();
-// console.log(currentDate);
-
-//task 9
-// const currentDate = new Date();
-// currentDate.setDate(new Date().getDate() + 73);
-// console.log(currentDate);
-
-//task 10
-// let myDate = new Date();
-// const days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
-// const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
-// "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
-// let hour = myDate.getHours();
-// let minute = myDate.getMinutes();
-// let second = myDate.getSeconds();
-
-// let fullDate = "Дата: " + myDate.getDate() + " " + months[myDate.getMonth()] 
-// + " " + myDate.getFullYear() + " - это " + days[myDate.getDay()];
-
-// if (minute < 10) {
-// 	minute = "0" + minute;
-// }
-// if (second < 10) {
-// 	second = "0" + second;
+// function beeps(callback) {
+//     setTimeout(() => {
+//         console.log('Идут гудки...');
+//         callback();
+//     }, 1000);
 // }
 
-// let fullTime = "Время: " + hour + ":" + minute + ":" + second;
+// function talk() {
+//     console.log('Разговор');
+// }
 
-// console.log(fullDate);
-// console.log(fullTime);
+// calling();
+// beeps(talk);
 
-//task 11
+
+
+
+
+
+
+
+
+
 let arr = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
 
 function shuffle(arr) {
